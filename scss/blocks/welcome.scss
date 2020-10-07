@@ -1,0 +1,47 @@
+.welcome {
+  min-height: 970px;
+  padding: 250px 0 0;
+  background-image: url(../img/welcome.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+  &_content {
+    animation: fadeInTop 1.5s;
+  }
+  &_title {
+    font-size: 88px;
+    color: $red;
+    margin-bottom: 188px;
+  }
+  &_btn {
+    
+  }
+  @media (max-width: $break_sm) {
+    min-height: 500px;
+    padding: 120px 0 50px;
+    margin-bottom: 50px;
+    &_title {
+      font-size: 40px;
+      margin-bottom: 90px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    background-position: right -100px top;
+    text-align: center;
+  }
+}
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translate(0,100px);
+  }
+  30% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}

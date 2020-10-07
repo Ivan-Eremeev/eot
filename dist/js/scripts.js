@@ -34,7 +34,7 @@ $(document).ready(function () {
 	});
 
 	// Мобильное меню
-	// myMenu($('#menu'));
+	myMenu($('#menu'));
 
 	// Блок с высотой окна браузера
 	// screenHeight($('#full-height'));
@@ -43,7 +43,7 @@ $(document).ready(function () {
 	// menuScroll($('#menu'));
 
 	// Stiky menu // Липкое меню. При прокрутке добавляем класс stiky.
-	// stikyMenu($('#header'));
+	stikyMenu($('#header'));
 
 	// Inputmask.js // Маска для поля ввода телефона
 	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
@@ -152,33 +152,51 @@ $(document).ready(function () {
 	// 	// tooltipDisable(); // Отключение всплывающей подсказки
 	// 	// sliderReinstall(); // Реинициализация слайдеров
 	// });
+
+	// Вставляет svg в html, позволяет управлять цветом через css 
+	$('img[src$=".svg"]').each(function () {
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		$.get(imgURL, function (data) {
+			var $svg = $(data).find('svg');
+			if (typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass + ' replaced-svg');
+			}
+			$svg = $svg.removeAttr('xmlns:a');
+			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+			}
+			$img.replaceWith($svg);
+		}, 'xml');
+	});
 	
 });
 
 // Мобильное меню
-// function myMenu(menu) {
-// 	var menuBtn = menu.find('#menu-btn')
-// 			over = menu.find('.menu_over'),
-// 			documentWidth = parseInt(document.documentElement.clientWidth),
-// 			windowsWidth = parseInt(window.innerWidth),
-// 			scrollbarWidth = windowsWidth - documentWidth,
-// 			html = $('html');
-// 	menuBtn.click(function () {
-// 		html.toggleClass('lock').css('padding-right',scrollbarWidth);
-// 		menu.toggleClass('open');
-// 		menuBtn.toggleClass('is-active');
-// 		over.click(function() {
-// 			html.removeClass('lock').css('padding-right',0);
-// 			menu.removeClass('open');
-// 			menuBtn.removeClass('is-active');
-// 		});
-// 		menu.find('a').click(function() {
-// 			html.removeClass('lock').css('padding-right',0);
-// 			menu.removeClass('open');
-// 			menuBtn.removeClass('is-active');
-// 		});
-// 	});	
-// };
+function myMenu(menu) {
+	var menuBtn = menu.find('#menu-btn')
+			over = menu.find('.menu_over'),
+			documentWidth = parseInt(document.documentElement.clientWidth),
+			windowsWidth = parseInt(window.innerWidth),
+			scrollbarWidth = windowsWidth - documentWidth,
+			html = $('html');
+	menuBtn.click(function () {
+		html.toggleClass('lock').css('padding-right',scrollbarWidth);
+		menu.toggleClass('open');
+		menuBtn.toggleClass('is-active');
+		over.click(function() {
+			html.removeClass('lock').css('padding-right',0);
+			menu.removeClass('open');
+			menuBtn.removeClass('is-active');
+		});
+		menu.find('a').click(function() {
+			html.removeClass('lock').css('padding-right',0);
+			menu.removeClass('open');
+			menuBtn.removeClass('is-active');
+		});
+	});	
+};
 
 // // Блок с высотой окна браузера
 // function screenHeight(fullHeight) {
@@ -201,16 +219,16 @@ $(document).ready(function () {
 // };
 
 // // Stiky menu // Липкое меню.
-// function stikyMenu(header) {
-// 	headerTop = header.offset().top;
-// 	$(window).scroll(function(){
-// 		if( $(window).scrollTop() > headerTop ) {
-// 			header.addClass('stiky');
-// 		} else {
-// 			header.removeClass('stiky');
-// 		}
-// 	});
-// };
+function stikyMenu(header) {
+	headerTop = header.offset().top;
+	$(window).scroll(function(){
+		if( $(window).scrollTop() > headerTop ) {
+			header.addClass('stiky');
+		} else {
+			header.removeClass('stiky');
+		}
+	});
+};
 
 // // Изменяет размер шрифта у тэга html взависимости от размера экрана (для резиновых страниц)(размеры должны быть в em)
 // function fontResize() {
@@ -585,21 +603,4 @@ $(document).ready(function () {
 //   	$(this).parent().text(arr[index]);
 //   });
 // };
-
-// Вставляет svg в html, позволяет управлять цветом через css 
-// $('img[src$=".svg"]').each(function(){
-//   var $img = $(this);
-//   var imgClass = $img.attr('class');
-//   var imgURL = $img.attr('src');
-//   $.get(imgURL, function(data) {
-//     var $svg = $(data).find('svg');
-//     if(typeof imgClass !== 'undefined') {
-//       $svg = $svg.attr('class', imgClass+' replaced-svg');
-//     }
-//     $svg = $svg.removeAttr('xmlns:a');
-//     if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-//       $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-//     }
-//     $img.replaceWith($svg);
-//   }, 'xml');
-// });
+//# sourceMappingURL=scripts.js.map

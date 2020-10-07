@@ -12,13 +12,11 @@
 	&_link {
 		display: block;
 		padding: 10px 0;
-		margin: 0 10px;
+		margin: 0 30px;
+		color: $grey;
 		text-decoration: none;
-		color: #fff;
-		@include line-fade();
 		&:hover {
-			color: #ccc;
-			border-color: #ccc;
+	    color: $grey;
 		}
 	}
 	@media (max-width: $break_sm) {
@@ -163,14 +161,14 @@
 		}
 		&_nav {
 			width: 80%;
-			background-color: #666;
+			padding: 20px 10px;
+			background-color: #f1f1f1;
 			z-index: 99;
 			overflow: hidden;
 		}
 		&_item {
 			display: block;
 			padding: 0 5px;
-			border-bottom: 1px solid #ccc;
 			// &:nth-child(1) {
 				
 			// }
@@ -223,6 +221,11 @@
 		&_link {
 			border: none;
 			margin: 0;
+			color: $red;
+			font-size: 20px;
+			&:hover {
+				color: $red;
+			}
 		}
 		&_over {
 			display: none;
@@ -234,16 +237,43 @@
 			width: 100%;
 		}
 	}
+	@media (min-width: $break_sm) {
+		&_link {
+			@include line-slide-center();
+		}
+	}
 }
 .hamburger {
+	padding: 10px;
 	display: none;
 	user-select: none;
 	position: relative;
 	z-index: 99;
+	top: 2px;
 	@media (max-width:$break_sm) {
 		display: block;
 		margin-left: auto;
 	}
+}
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+	width: 30px;
+	height: 2px;
+	background-color: $grey;
+}
+.hamburger-inner:before {
+	top: -8px;
+}
+.hamburger-inner:after {
+	bottom: -8px;
+}
+.hamburger-box {
+	width: 30px;
+	height: 18px;
+}
+.hamburger-box {
+	display: block;
 }
 @keyframes menuLinkLeft {
 	0% {

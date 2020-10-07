@@ -7,7 +7,7 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/animate.min.css")
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
 	//- link(rel="stylesheet", href="css/libs/fullpage.css")
-	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	link(rel="stylesheet", href="css/libs/hamburgers.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
@@ -19,26 +19,75 @@ block content
 	.page
 
 		include blocks/header.jade
-		
-		.content
-			.wrapper
 
-				
+		//- 
+		.welcome
+			.wrapper.wrapper-in
+				.welcome_content
+					h1.welcome_title Ищите психолога?
+					a(href="#").btn.welcome_btn
+						span Регистрация
+
+		.wrapper.wrapper-in
+
+			// advantages
+			.advantages
+				.row
+					.advantages_col
+						.advantage
+							.advantage_icon.img-responsive
+								img(src="img/icon1.svg", alt="advantage")
+							p.advantage_text 300 консультантов
+					.advantages_col
+						.advantage
+							.advantage_icon.img-responsive
+								img(src="img/icon2.svg", alt="advantage")
+							p.advantage_text ПРОВЕРКА ДИПЛОМОВ
+					.advantages_col
+						.advantage
+							.advantage_icon.img-responsive
+								img(src="img/icon3.svg", alt="advantage")
+							p.advantage_text КОНТРОЛЬ КАЧЕСТВА
+					.advantages_col
+						.advantage
+							.advantage_icon.img-responsive
+								img(src="img/icon4.svg", alt="advantage")
+							p.advantage_text СИСТЕМА ОТЗЫВОВ
+			//	/advantages
+
+			// eot
+			.eot
+				h2.eot_title Почему ЭОТ?
+				.eot_row
+					.eot_content
+						p Эмоционально-образная терапия работает на территории бессознательного человека, которое знает ответы на все вопросы, но говорит на языке образов.<br>В этом и кроется секрет эффективности метода: все решения скрыты в бессознательном, а у ЭОТ есть к нему ключи.
+						p Поэтому большинство клиентских запросов могут быть разрешены за 2-3 сессии, и нет необходимости ходить к психологу годами. 
+						p Быстро, бережно, эффективно.
+					.eot_video
+						a(href="#").video
+							img(src="img/video.jpg", alt="video").video_img
+							span.video_play.img-responsive
+								img(src="img/play.png", alt="play")
+				.eot_b
+					p.eot_text После регистрации на сайте вы также можете пройти один из вводных бесплатных курсов академии, чтобы ближе познакомиться с методом.
+					a(href="#").btn.eot_btn
+						span Регистрация
+			//	/eot
 			
 		include blocks/footer.jade
 
 block js-libs
-	script(src="js/jquery.min.js")
-	//- script(src="js/jquery.fancybox.min.js")
-	//- script(src="js/slick.min.js")
-	//- script(src="js/jquery.matchHeight-min.js")
-	//- script(src="js/jquery.inputmask.min.js")
-	//- script(src="js/autosize.min.js")
-	//- script(src="js/tooltipster.bundle.min.js")
-	//- script(src="js/jquery.mmenu.min.all.js")
-	//- script(src="js/wow.min.js")
-	//- script(src="js/fullpage.min.js")
-	//- script(src="js/jquery.vide.min.js")
-	//- script(src="js/jquery.scrollbar.min.js")
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/wow.min.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
 	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
 	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

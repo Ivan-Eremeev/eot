@@ -1,11 +1,15 @@
 // header
 header.header#header
 	.wrapper
-		.header_container
+
+		.header_b
+
+			a(href="#").logo
+				img(src="img/logo.png", alt="logo")
 
 			// menu
 			//- .menu--left .menu--right .menu--top .menu--bottom .menu--drop
-			#menu.menu.menu--right
+			#menu.menu.menu--left
 				button#menu-btn.menu_btn.hamburger.hamburger--vortex(type="button")
 					span.hamburger-box
 						span.hamburger-inner
@@ -17,5 +21,16 @@ header.header#header
 							a(href="#").menu_link Возможности
 				.menu_over
 			// /menu
+
+		.user
+			.user_b
+				a(href="#").user_btn Регистрация
+				a(href="#").user_login Войти
+			.user_c
+				a(href="#").user_icon
+					img(src="img/cart.svg", alt="cart")
+					.user_num 1
+				a(href="#").user_icon
+					img(src="img/search.svg", alt="search")
 
 // /header

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <link rel="stylesheet" href="css/libs/hamburgers.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -13,9 +14,9 @@
       <!-- header-->
       <header class="header" id="header">
         <div class="wrapper">
-          <div class="header_container">
+          <div class="header_b"><a class="logo" href="#"><img src="img/logo.png" alt="logo"></a>
             <!-- menu-->
-            <div class="menu menu--right" id="menu">
+            <div class="menu menu--left" id="menu">
               <button class="menu_btn hamburger hamburger--vortex" id="menu-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
               <nav class="menu_nav" id="mmenu">
                 <ul class="menu_list">
@@ -27,11 +28,68 @@
             </div>
             <!-- /menu-->
           </div>
+          <div class="user">
+            <div class="user_b"><a class="user_btn" href="#">Регистрация</a><a class="user_login" href="#">Войти</a></div>
+            <div class="user_c"><a class="user_icon" href="#"><img src="img/cart.svg" alt="cart">
+                <div class="user_num">1</div></a><a class="user_icon" href="#"><img src="img/search.svg" alt="search"></a></div>
+          </div>
         </div>
       </header>
       <!-- /header-->
-      <div class="content">
-        <div class="wrapper"></div>
+      <div class="welcome">
+        <div class="wrapper wrapper-in">
+          <div class="welcome_content">
+            <h1 class="welcome_title">Ищите психолога?</h1><a class="btn welcome_btn" href="#"><span>Регистрация</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-in">
+        <!-- advantages-->
+        <div class="advantages">
+          <div class="row">
+            <div class="advantages_col">
+              <div class="advantage">
+                <div class="advantage_icon img-responsive"><img src="img/icon1.svg" alt="advantage"></div>
+                <p class="advantage_text">300 консультантов</p>
+              </div>
+            </div>
+            <div class="advantages_col">
+              <div class="advantage">
+                <div class="advantage_icon img-responsive"><img src="img/icon2.svg" alt="advantage"></div>
+                <p class="advantage_text">ПРОВЕРКА ДИПЛОМОВ</p>
+              </div>
+            </div>
+            <div class="advantages_col">
+              <div class="advantage">
+                <div class="advantage_icon img-responsive"><img src="img/icon3.svg" alt="advantage"></div>
+                <p class="advantage_text">КОНТРОЛЬ КАЧЕСТВА</p>
+              </div>
+            </div>
+            <div class="advantages_col">
+              <div class="advantage">
+                <div class="advantage_icon img-responsive"><img src="img/icon4.svg" alt="advantage"></div>
+                <p class="advantage_text">СИСТЕМА ОТЗЫВОВ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--	/advantages-->
+        <!-- eot-->
+        <div class="eot">
+          <h2 class="eot_title">Почему ЭОТ?</h2>
+          <div class="eot_row">
+            <div class="eot_content">
+              <p>Эмоционально-образная терапия работает на территории бессознательного человека, которое знает ответы на все вопросы, но говорит на языке образов.<br>В этом и кроется секрет эффективности метода: все решения скрыты в бессознательном, а у ЭОТ есть к нему ключи.</p>
+              <p>Поэтому большинство клиентских запросов могут быть разрешены за 2-3 сессии, и нет необходимости ходить к психологу годами. </p>
+              <p>Быстро, бережно, эффективно.</p>
+            </div>
+            <div class="eot_video"><a class="video" href="#"><img class="video_img" src="img/video.jpg" alt="video"><span class="video_play img-responsive"><img src="img/play.png" alt="play"></span></a></div>
+          </div>
+          <div class="eot_b">
+            <p class="eot_text">После регистрации на сайте вы также можете пройти один из вводных бесплатных курсов академии, чтобы ближе познакомиться с методом.</p><a class="btn eot_btn" href="#"><span>Регистрация</span></a>
+          </div>
+        </div>
+        <!--	/eot-->
       </div>
       <!-- footer-->
       <footer class="footer"> 
@@ -39,7 +97,7 @@
       </footer>
       <!-- /footer-->
     </div>
-    <script src="js/jquery.min.js"></script>
+    <script src="js/libs/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

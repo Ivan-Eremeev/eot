@@ -1,0 +1,43 @@
+.advantages {
+  margin-bottom: 145px;
+  &_col {
+    @include col(3);
+    @include col-sm(6);
+    @include col-xs(12);
+    margin-bottom: $gutter;
+  }
+  @media (max-width: $break_sm) {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+.advantage {
+  height: 100%;
+  padding: 60px 10px;
+  text-transform: uppercase;
+  color: $red;
+  text-align: center;
+  border: 1px solid $red;
+  border-radius: 40px;
+  &_icon {
+    margin-bottom: 50px;
+    svg {
+      height: 100%;
+    }
+    &:after {
+      padding-top: 51%;
+    }
+  }
+  &_text {
+    
+  }
+  @media (max-width: $break_md) {
+    padding: 30px 10px;
+    font-size: 18px;
+    &_icon {
+      margin-bottom: 20px;
+    }
+  }
+}

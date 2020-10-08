@@ -175,8 +175,9 @@ $(document).ready(function () {
 
 // Мобильное меню
 function myMenu(menu) {
-	var menuBtn = menu.find('#menu-btn')
+	var menuBtn = menu.find('#menu-btn'),
 			over = menu.find('.menu_over'),
+			close = menu.find('#close'),
 			documentWidth = parseInt(document.documentElement.clientWidth),
 			windowsWidth = parseInt(window.innerWidth),
 			scrollbarWidth = windowsWidth - documentWidth,
@@ -192,6 +193,11 @@ function myMenu(menu) {
 		});
 		menu.find('a').click(function() {
 			html.removeClass('lock').css('padding-right',0);
+			menu.removeClass('open');
+			menuBtn.removeClass('is-active');
+		});
+		close.click(function () {
+			html.removeClass('lock').css('padding-right', 0);
 			menu.removeClass('open');
 			menuBtn.removeClass('is-active');
 		});

@@ -1,5 +1,5 @@
 .advantages {
-  margin-bottom: 145px;
+  margin-bottom: 247px;
   &_col {
     @include col(3);
     @include col-sm(6);
@@ -15,19 +15,22 @@
 }
 .advantage {
   height: 100%;
-  padding: 60px 10px;
+  padding: 60px 10px 30px;
   text-transform: uppercase;
   color: $red;
   text-align: center;
   border: 1px solid $red;
   border-radius: 40px;
+  font-size: 30px;
   &_icon {
-    margin-bottom: 50px;
-    svg {
-      height: 100%;
-    }
+    margin-bottom: 37px;
+  }
+  &_img {
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
     &:after {
-      padding-top: 51%;
+      padding-top: 110%;
     }
   }
   &_text {

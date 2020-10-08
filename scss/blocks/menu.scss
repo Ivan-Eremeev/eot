@@ -1,6 +1,5 @@
 .menu {
 	&_nav {
-		
 	}
 	&_list {
 		text-align: center;
@@ -12,14 +11,42 @@
 	&_link {
 		display: block;
 		padding: 10px 0;
-		margin: 0 30px;
+		margin: 0 36px;
 		color: $grey;
 		text-decoration: none;
 		&:hover {
 	    color: $grey;
 		}
 	}
-	@media (max-width: $break_sm) {
+	&_close {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 25px;
+		right: 20px;
+		z-index: 101;
+
+		&:after,
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $red;
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+
+		&:after {
+			transform: rotate(45deg);
+		}
+
+		&:before {
+			transform: rotate(-45deg);
+		}
+	}
+	@media (max-width: $break_md) {
 		position: relative;
 		z-index: 100;
 		&--left {
@@ -237,9 +264,12 @@
 			width: 100%;
 		}
 	}
-	@media (min-width: $break_sm) {
+	@media (min-width: $break_md) {
 		&_link {
 			@include line-slide-center();
+		}
+		&_close {
+			display: none;
 		}
 	}
 }
@@ -250,7 +280,7 @@
 	position: relative;
 	z-index: 99;
 	top: 2px;
-	@media (max-width:$break_sm) {
+	@media (max-width:$break_md) {
 		display: block;
 		margin-left: auto;
 	}

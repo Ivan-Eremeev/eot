@@ -20,18 +20,19 @@ block content
 
 		include blocks/header.jade
 
-		//- 
-		.welcome
+		// welcome
+		section.welcome
 			.wrapper.wrapper-in
 				.welcome_content
 					h1.welcome_title Ищите психолога?
 					a(href="#").btn.welcome_btn
 						span Регистрация
+		// /welcome
 
 		.wrapper.wrapper-in
 
 			// advantages
-			.advantages
+			section.advantages
 				.row
 					.advantages_col
 						.advantage
@@ -60,7 +61,7 @@ block content
 			//	/advantages
 
 			// eot
-			.eot
+			section.eot
 				h2.eot_title Почему ЭОТ?
 				.eot_row
 					.eot_content
@@ -77,6 +78,60 @@ block content
 					a(href="#").btn.eot_btn
 						span Регистрация
 			//	/eot
+
+		// why
+		section.why
+			.wrapper.wrapper-in
+				//- .why_title.mobile-visible Почему наша платформа?
+				.row
+					.why_col.why_col--title
+						.why_title Почему наша платформа?
+					.why_col
+						.card
+							.card_num
+								span 01
+							h3.card_title ГАРАНТИЯ КАЧЕСТВА
+							p.card_text Каждый терапевт прошел десятки консультаций прежде, чем получил диплом и возможность практиковать. Мы постоянно повышаем качество наших образовательных услуг, а вместе с ним и уровень выпускников.
+
+					.why_col
+						.card
+							.card_num
+								span 02
+							h3.card_title СИСТЕМА РЕЙТИНГОВ И ОТЗЫВОВ
+							p.card_text Мы внедрили систему отзывов на платформе.И отслеживаем любую реакцию клиентов.Так мы минимизируем случаи, когда терапевт “не в форме”. А вы можете быть уверены, что если что-то пойдет не так, мы всегда будем рядом
+					.why_col
+						.card
+							.card_num
+								span 03
+							h3.card_title УДОБСТВО  ПОЛЬЗОВАНИЯ
+							p.card_text Пройдите простую регистрацию и получите доступ к сообществу эмоционально-образных терапевтов, а также бесплатным курсам платформы, чтобы лучше познакомиться с методом. Чтобы договориться о консультации, после регистрации напишите сообщение терапевту в разделе “Сообщество”.
+					.why_col
+						.card
+							.card_num
+								span 04
+							h3.card_title СУПЕРВИЗИИ УЧЕНИКОВ
+							p.card_text Мы организовали ежемесячные группы супервизии, чтобы терапевты могли обсуждать сложные случаи и консультироваться с коллегами. Это ещё один способ контролировать высокое качество услуг, которые предоставляют наши выпускники
+					.why_col
+						.card
+							.card_num
+								span 05
+							h3.card_title ДОСТУПНО
+							p.card_text В нашем сообществе более 300 терапевтов. Некоторые из них только набирают клиентскую базу. Поэтому готовы провести первую консультацию бесплатно в обмен на отзыв.
+		//	/why
+
+		.wrapper.wrapper-in
+			.title ЭОТ – самый эффективный и бережный способ решения ваших психологических проблем
+
+		// registration
+		section.registration
+			.wrapper
+				.registration_img
+					img(src="img/cat.png", alt="cat")
+				h2.registration_title Регистрация
+				p.registration_text Начните свое погружение в ЭОТ с бесплатного курса или консультации с терапевтом. Зарегистрируйтесь на сайте и воспользуйтесь возможностями платформы.
+				.btn Регистрация
+		//	/registration
+
 			
 		include blocks/footer.jade
 

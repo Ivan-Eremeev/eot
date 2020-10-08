@@ -1,5 +1,5 @@
 .eot {
-  margin-bottom: 50px;
+  margin-bottom: 186px;
   &_title {
     font-size: 95px;
     color: $red;
@@ -28,11 +28,11 @@
     text-align: center;
   }
   &_text {
-    max-width: 1200px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 45px;
-    font-size: 47px;
+    font-size: 33px;
     line-height: 1.1;
   }
   &_btn {
@@ -53,6 +53,7 @@
     }
   }
   @media (max-width: $break_sm) {
+    margin-bottom: 50px;
     &_title {
       font-size: 40px;
       margin-bottom: 30px;

@@ -19,6 +19,16 @@
     line-height: 1.2;
     margin-bottom: 67px;
   }
+  .btn {
+    transition: 0.3s;
+    &:before {
+      display: none;
+    }
+    &:hover {
+      color: #000;
+      box-shadow: 0 0 8px rgba(0,0,0,.3);
+    }
+  }
   @media (max-width: $break_sm) {
     padding: 50px 0 50px;
     background-image: none;

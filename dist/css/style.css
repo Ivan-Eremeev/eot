@@ -80,20 +80,6 @@ h1, h2, h3 {
 }
 
 @font-face {
-	font-family: "Sansation";
-	font-weight: 300;
-	font-style: normal;
-	src: url("../fonts/Sansation/SansationLight.eot");
-	src: url("../fonts/Sansation/SansationLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Sansation/SansationLight.woff") format("woff"), url("../fonts/Sansation/SansationLight.woff2") format("woff2"), url("../fonts/Sansation/SansationLight.ttf") format("truetype"), url("../fonts/Sansation/SansationLight.svg") format("svg");
-}
-@font-face {
-	font-family: "Sansation";
-	font-weight: normal;
-	font-style: normal;
-	src: url("../fonts/Sansation/SansationRegular.eot");
-	src: url("../fonts/Sansation/SansationRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Sansation/SansationRegular.woff") format("woff"), url("../fonts/Sansation/SansationRegular.woff2") format("woff2"), url("../fonts/Sansation/SansationRegular.ttf") format("truetype"), url("../fonts/Sansation/SansationRegular.svg") format("svg");
-}
-@font-face {
 	font-family: "Circe";
 	font-weight: 300;
 	font-style: normal;
@@ -1130,6 +1116,16 @@ body {
 	line-height: 1.2;
 	margin-bottom: 67px;
 }
+.registration .btn {
+	transition: 0.3s;
+}
+.registration .btn:before {
+	display: none;
+}
+.registration .btn:hover {
+	color: #000;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
 @media (max-width: 769px) {
 	.registration {
 		padding: 50px 0 50px;
@@ -1146,6 +1142,118 @@ body {
 	.registration_text {
 		font-size: 18px;
 		margin-bottom: 30px;
+	}
+}
+
+.footer {
+	padding: 140px 0 43px;
+	background-image: url(../img/footer.jpg);
+	background-size: cover;
+	color: #fff;
+}
+.footer_col {
+	width: 33.3333333333%;
+	margin-bottom: 30px;
+	padding-right: 30px;
+}
+@media screen and (max-width: 1200px) {
+	.footer_col {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 425px) {
+	.footer_col {
+		width: 100%;
+	}
+}
+.footer_title {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+.footer_text {
+	font-size: 24px;
+}
+.footer_list {
+	font-size: 24px;
+}
+.footer_list a {
+	color: #a42558;
+}
+.footer_list a:hover {
+	text-decoration: underline;
+}
+.footer_row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.footer_content a {
+	margin-bottom: 10px;
+	color: #fff;
+}
+.footer_content a:hover {
+	text-decoration: underline;
+}
+.footer_b {
+	display: flex;
+	align-items: center;
+	line-height: 1;
+}
+.footer_b img {
+	flex-shrink: 0;
+	margin-bottom: 4px;
+	margin-right: 10px;
+}
+.footer_count {
+	position: relative;
+}
+.footer_img {
+	width: 110px;
+	display: block;
+}
+.footer_img:after {
+	padding-top: 100%;
+}
+.footer_num {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	background-color: #a42558;
+	border-radius: 4px;
+	position: absolute;
+	bottom: 10px;
+	right: -10px;
+	color: #fff;
+	font-size: 18px;
+}
+@media (max-width: 1200px) {
+	.footer_col--3 {
+		width: 100%;
+		max-width: 700px;
+	}
+}
+@media (max-width: 769px) {
+	.footer {
+		padding: 50px 0 20px;
+	}
+	.footer_title {
+		font-size: 22px;
+	}
+	.footer_text {
+		font-size: 18px;
+	}
+	.footer_list {
+		font-size: 18px;
+	}
+	.footer_img {
+		width: 60px;
+	}
+	.footer_num {
+		width: 20px;
+		height: 20px;
+		font-size: 13px;
 	}
 }
 /*# sourceMappingURL=style.css.map */

@@ -25,8 +25,6 @@ $break_xs: 425px;
 // $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
 
 // Шрифты
-@include font-face("Sansation", "../fonts/Sansation/SansationLight", 300, normal);
-@include font-face("Sansation", "../fonts/Sansation/SansationRegular", normal, normal);
 @include font-face("Circe", "../fonts/Circe/Circe-Light", 300, normal);
 @include font-face("Circe", "../fonts/Circe/Circe-Regular", normal, normal);
 @include font-face("Circe", "../fonts/Circe/Circe-Bold", bold, normal);
@@ -44,6 +42,7 @@ $grey: #5C5C5C;;
 @import 'blocks/eot';
 @import 'blocks/why';
 @import 'blocks/registration';
+@import 'blocks/footer';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';
